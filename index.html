@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Seemeu - Chat với người lạ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="intro" id="introScreen">
+      <div class="brand">
+        <div class="logo">S</div>
+        <h1>Seemeu</h1>
+      </div>
 
+      <p class="tagline">
+        Kết nối ngẫu nhiên và trò chuyện ẩn danh với người lạ.
+      </p>
+
+      <div class="notice">
+        <p>Hãy lịch sự. Không gửi thông tin cá nhân, link lạ hoặc nội dung nhạy cảm.</p>
+      </div>
+
+      <button id="startBtn" class="primary-btn">Bắt đầu chat</button>
+    </section>
+
+    <section class="chat hidden" id="chatScreen">
+      <header class="chat-header">
+        <div>
+          <h2>Seemeu</h2>
+          <p id="statusText">Chưa kết nối</p>
+        </div>
+
+        <button id="nextBtn" class="small-btn">Người khác</button>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="system-message">
+          Bấm “Người khác” để tìm người trò chuyện.
+        </div>
+      </div>
+
+      <form class="chat-form" id="chatForm">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Nhập tin nhắn..."
+          maxlength="400"
+          autocomplete="off"
+        />
+        <button type="submit">Gửi</button>
+      </form>
+
+      <div class="chat-actions">
+        <button id="stopBtn" class="danger-btn" type="button">Dừng chat</button>
+        <button id="reportBtn" class="ghost-btn" type="button">Báo cáo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
